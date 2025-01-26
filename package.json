@@ -2,15 +2,30 @@
   "name": "supernote-obsidian-plugin",
   "version": "2.6.1",
   "description": "Unofficial Supernote by Ratta Integration for Obsidian",
+  "keywords": [],
+  "homepage": "https://github.com/philips/supernote-obsidian-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/philips/supernote-obsidian-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philips/supernote-obsidian-plugin.git"
+  },
+  "license": "MIT",
+  "author": "Brandon Philips",
+  "type": "commonjs",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
     "version": "node version-bump.mjs && git add manifest.json versions.json"
   },
-  "keywords": [],
-  "author": "Francois Menard",
-  "license": "MIT",
+  "dependencies": {
+    "esbuild-plugin-inline-worker": "^0.1.1",
+    "image-js": "^0.35.5",
+    "jspdf": "^2.5.2",
+    "supernote": "github:philips/supernote-typescript"
+  },
   "devDependencies": {
     "@types/color": "^3.0.6",
     "@types/jest": "^29.5.12",
@@ -22,19 +37,5 @@
     "obsidian": "latest",
     "tslib": "2.4.0",
     "typescript": "4.7.4"
-  },
-  "dependencies": {
-    "esbuild-plugin-inline-worker": "^0.1.1",
-    "image-js": "^0.35.5",
-    "jspdf": "^2.5.2",
-    "supernote": "github:philips/supernote-typescript"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/philips/supernote-obsidian-plugin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/philips/supernote-obsidian-plugin/issues"
-  },
-  "homepage": "https://github.com/philips/supernote-obsidian-plugin#readme"
+  }
 }
